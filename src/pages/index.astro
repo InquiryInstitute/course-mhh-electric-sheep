@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const modules = [
+  {
+    number: "00",
+    title: "Do Androids Dream?",
+    description: "Close reading of Dick's novel. Focus: empathy as contested ground.",
+    type: "text"
+  },
+  {
+    number: "01",
+    title: "Turing's Question",
+    description: "What did Turing actually propose? What did he explicitly not claim?",
+    type: "text"
+  },
+  {
+    number: "02",
+    title: "CAPTCHA: A Brief History of Ritual Humiliation",
+    description: "From reCAPTCHA to hCaptcha to Cloudflare Turnstile — the industry of proving you're real.",
+    type: "text"
+  },
+  {
+    number: "03",
+    title: "Liveness, Presence, and the Interview",
+    description: "Zoom fatigue, video KYC, and what 'being present' means when presence is mediated.",
+    type: "text"
+  },
+  {
+    number: "04",
+    title: "Who Gets to Decide?",
+    description: "Power, classification, and the authority to draw lines.",
+    type: "reflection"
+  }
+];
+---
+
+<BaseLayout title="Electric Sheep">
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <!-- Header -->
+    <header class="mb-16 text-center">
+      <p class="font-mono text-season-primary text-sm tracking-widest mb-4">SEASON 0</p>
+      <h1 class="font-display text-5xl md:text-7xl text-zinc-100 mb-6">
+        Electric Sheep
+      </h1>
+      <p class="text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
+        Invitation, orientation, self-test
+      </p>
+    </header>
+
+    <!-- Purpose -->
+    <section class="mb-16">
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-900/30">
+        <h2 class="font-display text-2xl text-zinc-100 mb-4">Purpose</h2>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          Season 0 is a self-paced, openly accessible introduction. It is not a MOOC. 
+          It is not a preview. It is the portico — a space of preparation and decision.
+        </p>
+        <p class="text-zinc-400 italic">
+          "Do Androids Dream of Electric Sheep?" is not just a reference. It is the question 
+          the course makes you live with.
+        </p>
+      </div>
+    </section>
+
+    <!-- Characteristics -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-8">Characteristics</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">FORMAT</div>
+          <p class="text-zinc-300">Asynchronous, self-paced</p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">ENROLLMENT</div>
+          <p class="text-zinc-300">Open, no prerequisites</p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">ASSESSMENT</div>
+          <p class="text-zinc-300">No grades, no credentials</p>
+        </div>
+        <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30">
+          <div class="font-mono text-season-primary text-sm mb-2">AVAILABILITY</div>
+          <p class="text-zinc-300">Open until May 2026</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Text -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-6">Core Text</h2>
+      <div class="border border-season-primary/30 rounded-lg p-8 bg-zinc-900/50">
+        <p class="font-mono text-sm text-season-primary mb-2">REQUIRED READING</p>
+        <h3 class="text-xl text-zinc-100 mb-2">Do Androids Dream of Electric Sheep?</h3>
+        <p class="text-zinc-400">Philip K. Dick, 1968</p>
+        <p class="text-zinc-500 text-sm mt-4">
+          Available in paperback, ebook, and audiobook formats.
+        </p>
+      </div>
+    </section>
+
+    <!-- Modules -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-8">Content Modules</h2>
+      <div class="space-y-4">
+        {modules.map((module) => (
+          <div class="border border-zinc-800 rounded-lg p-6 bg-zinc-900/30 hover:border-season-primary/30 transition-colors">
+            <div class="flex items-start gap-6">
+              <span class="font-mono text-3xl text-zinc-700 font-bold">{module.number}</span>
+              <div>
+                <h3 class="text-lg text-zinc-100 mb-2">{module.title}</h3>
+                <p class="text-zinc-400 text-sm">{module.description}</p>
+                <span class="inline-block mt-3 font-mono text-xs text-season-primary uppercase tracking-wider">
+                  {module.type}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Dramatic Component -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-6">Dramatic Component</h2>
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-900/30">
+        <h3 class="text-xl text-zinc-100 mb-4">The Voight-Kampff Prologue</h3>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          A brief simulated test experience — not to "pass," but to feel what it's like 
+          to be tested. Participants may decline.
+        </p>
+        <p class="text-zinc-400 italic">
+          This is not gamification. It is ritual inoculation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Optional Artifact -->
+    <section class="mb-16">
+      <h2 class="font-display text-2xl text-zinc-100 mb-6">Optional Artifact</h2>
+      <div class="border border-zinc-800 rounded-lg p-8 bg-zinc-900/30">
+        <p class="text-zinc-300 leading-relaxed">
+          A brief reflective piece (500 words or less): <em class="text-zinc-100">"What would a test for humanity 
+          need to detect that no current test can?"</em>
+        </p>
+        <p class="text-zinc-500 text-sm mt-4">
+          Submitted artifacts may be invited for inclusion in Season 1 discussions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="mb-16">
+      <div class="border border-season-primary rounded-lg p-8 bg-zinc-900/50 text-center">
+        <p class="font-mono text-season-primary text-sm tracking-widest mb-2">ENROLLMENT</p>
+        <p class="text-4xl font-display text-zinc-100 mb-2">Free</p>
+        <p class="text-zinc-400">Open access, no registration required</p>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="border-t border-zinc-800 pt-8 flex justify-between items-center">
+      <a href="/course-mhh-core" class="text-zinc-500 hover:text-season-primary transition-colors">
+        ← Arc Overview
+      </a>
+      <a href="/course-mhh-voight-kampff" class="text-zinc-500 hover:text-season-primary transition-colors">
+        Season 1: Voight-Kampff →
+      </a>
+    </nav>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-zinc-800 text-center">
+      <p class="font-mono text-xs text-zinc-600">
+        More Human Than Human · Inquiry Institute
+      </p>
+    </footer>
+  </main>
+</BaseLayout>
